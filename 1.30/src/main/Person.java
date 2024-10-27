@@ -5,7 +5,10 @@ class Person {
     String name;    
     int age;       
     double height; 
-    double weight; // 問題4: 新しいフィールド weight を追加（データ型: double）
+    double weight; // 問題4: 新しいフィールド weight を追加
+
+    // 問題10: 人数カウント用の静的変数
+    static int count = 0;
 
     // 問題2: コンストラクタを定義（引数: name, age, height, weight）
     Person(String name, int age, double height, double weight) {
@@ -14,12 +17,15 @@ class Person {
         this.age = age;
         this.height = height;
         this.weight = weight; // weight をセット
+
+        // コンストラクタ内でインクリメントして人数をカウント
+        count++;
     }
 
-    // 啈題6: インスタンスメソッド bmi を定義（戻り値：double）
+    // 問題6: インスタンスメソッド bmi を定義（戻り値：double）
     public double bmi() {
-        // 問題7: bmi メソッドでインスタンスの BMI を返す
-        return weight / (height * height); // BMI 計算
+        // 問題7: BMI計算を修正 (小数第一位まで)
+        return Math.round(weight / (height * height) * 10) / 10.0;
     }
 
     // 問題8: インスタンスメソッド print を定義（戻り値：void）
