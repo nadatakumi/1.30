@@ -22,13 +22,13 @@ class Person {
         count++;
     }
 
-    // 問題6: インスタンスメソッド bmi を定義（戻り値：double）
+    // 問題6: インスタンスメソッド bmi を定義
     public double bmi() {
         // 問題7: BMI計算を修正 (小数第一位まで)
         return Math.round(weight / (height * height) * 10) / 10.0;
     }
 
-    // 問題8: インスタンスメソッド print を定義（戻り値：void）
+    // 問題8: インスタンスメソッド print を定義
     public void print() {
         // 問題9: print メソッドの中で this を用いて出力
         System.out.println("名前は" + this.name + "です");
